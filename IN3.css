@@ -1,0 +1,158 @@
+header {
+    background-color: #46334a;
+    font-family: monospace;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+    background-image: url('prooguxr-logo7.png');
+    background-attachment: fixed;
+    font-family: monospace;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header h1 {
+    font-size: 30px;
+    font-family: monospace;
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #00bcd4;
+}
+
+main {
+    padding: 40px;
+}
+
+footer {
+    color: #888787;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+}
+
+footer nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+footer nav ul li {
+    margin-left: 20px;
+}
+
+footer nav ul li a {
+    color: #a47baa;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+footer nav ul li a:hover {
+    color: #00bcd4;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+section {
+    margin-bottom: 40px;
+}
+section ul li {
+    margin-bottom: 30px;
+    color: aliceblue;
+}
+
+section ul li a {
+    color: #fff;
+    font-size: 30px;
+    font-family: monospace;
+ }
+ section ul li a {
+    color: #c4c1c1;
+    text-decoration: none;
+    font-size: 30px;
+    transition: all 0.3s ease;
+}
+section ul li {
+    margin-bottom: 30px;
+    color: aliceblue;
+}
+section ul li a:hover {
+    color: #00bcd4;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.social-media-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.social-media-icons a:hover {
+    background-color: #00bcd4;
+    color: #fff;
+}
+
+.social-media-icons a i {
+    line-height: inherit;
+}
+
+.social-media-icons a i.fa-github {
+    color: #333;
+}
+
+.social-media-icons a i.fa-telegram {
+    color: #0088cc;
+}
+
+.social-media-icons a i.fa-envelope {
+    color: #c71616;
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>PR&lt;&gt;GUXR</title>
+	<link rel="stylesheet" href="IN2.css">
+</head>
+<body>
+	<header>
+		<h1>TP03</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<!--<li><a href="#">About</a></li>-->
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+		     <B><p>   Ecrire 4 fonctions/procédures déférèrent pour trier un tableau (un
+				seul dimension) en ordre descendent.</p></B> <BR></BR>
+				<P> 1/tri par  bulles </P>
+<pre>
+<code>
+#include&lt;stdio.h&gt;
+void tri_b(int t[]) {
+int i, j, a;
+for (i = 0; i &lt; 10; i++) {
+for (j = 0; j &lt; 10-i-1; j++) {
+if (t[j] &lt; t[j+1]) {
+a = t[j];
+t[j] = t[j+1];
+t[j+1] = a;
+}
+}
+}
+}
+int main(){
+int j,i,u[10];
+printf(" les elem de u est  \n");
+for (i=0;i&lt;10;i++){
+printf("u[%d]",i);
+scanf("%d",&u[i]);
+}
+printf("*****");
+printf("\n");
+tri_b(u);
+for (i=0;i&lt;10;i++){
+printf(" u[%d]=%d \n",i,u[i]);
+}
+return 0;}
+</code>
+</pre>	
+<P> tri par sélection </P>
+
+<pre>
+<code>
+#include&lt;stdio.h&gt;
+void tri_s(int t[]){
+int a,i,j;
+for (i=0;i&lt;10;i++){
+for (j=i+1;j&lt;10;j++){
+if(t[i]&lt;t[j]){
+a=t[i];
+t[i]=t[j];
+t[j]=a;
+}}
+}
+}
+int main(){
+int j,i,u[10],s,n;
+printf("les elem de u est \n");
+for (i=0; i&lt;10;i++){
+printf(" u[%d]",i);
+scanf("%d",&u[i]);
+}
+printf("*****");
+printf("\n");
+tri_s(u);
+for (i=0;i&lt;10;i++){
+printf(" u[%d]=%d \n",i,u[i]);
+}
+return 0;
+}
+</code>
+</pre>
+<p> tri par insertion</p>
+
+<pre>
+<code>
+#include&lt;stdio.h&gt;
+void tri_i(int t[],int n) {
+int i,j,b;
+for (i = 1; i &lt; n; i++) {
+b= t[i];
+j = i - 1;
+while (j &gt;= 0 && t[j] &lt; b) {
+t[j+1] = t[j];
+j--;
+}
+t[j+1] = b;
+}
+}
+int main(){
+int x=100,n;
+int j,i,u[x];
+printf(" entrer la la taill de u");
+scanf("%d",&n);
+printf(" les elem de u est \n");
+for (i=0;i&lt;n;i++){
+printf(" u[%d]",i);
+scanf("%d",&u[i]);
+}
+printf("*****");
+printf("tri par insertion  ");
+printf("*****");
+printf("\n");
+tri_i(u,n) ;
+for (i=0;i&lt;n;i++){
+printf(" u[%d]=%d \n",i,u[i]);
+}
+return 0;
+}
+</code>
+</pre>
+			
+		</section>
+	</main>
+	<footer>
+		<nav>
+			<ul>
+			  <li><a href="mailto:bochra.tahraoui@univ-bouira.dz" target="_blank" title="go to"><i class="fas fa-envelope"></i> Gmail</a></li>
+			  <li><a href="https://github.com/bochraT03" target="_blank" title="go to"><i class="fab fa-github"></i> GitHub</a></li>
+			  <li><a href="https://t.me/cp_disb" target="_blank" title="go to"><i class="fab fa-telegram"></i> Telegram</a></li>
+			</ul>
+		 </nav>	
+		 <p>Copyright&copy; 2023 uxr</p>
+	</footer>
+</body>
+</html>

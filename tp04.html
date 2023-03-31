@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>PR&lt;&gt;GUXR</title>
+    <link rel="stylesheet" href="IN2.css">
+</head>
+
+<body>
+    <header>
+        <h1>TP04</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+               <!-- <li><a href="#">About</a></li>-->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <P> la SOLUTION </P>
+             <b><p>Ecrire un programmes permettant de supprimer toutes les valeures
+                    nulles dans un vecteur. </p> </B> 
+<pre>
+<code>
+#include&lt;stdio.h&gt;
+int main()
+{
+int x=100,t[x],n,i,j;
+printf("entere la taill de t");
+scanf("%d",&n);
+for (i=0;i&lt;n;i++){
+printf("t[%d]",i);
+scanf("%d",&t[i]);
+}
+j=0;
+for (i=0;i&lt;n;i++){
+if (t[i]!=0){
+t[j]=t[i];
+j++;
+}
+}
+for (i=0;i&lt;j;i++){
+printf(" t[%d]=%d\n",i,t[i]);
+}
+return 0;
+}
+</code>
+</pre>
+            <b><p>Ecrire un programme permettant de supprimer toutes les colonnes
+                identiques dans une matrices.</p></b>
+            <pre>
+<code>
+
+</code>
+</pre>
+           <b><p>Ecrire un programmes permettant d’afficher toutes les nombres
+            parfait dans une matrice.</p></b>
+<pre>
+<code>
+#include &lt;stdio.h&gt;
+int main() {
+int x=100,y=100,t[x][y],m,a,n, i, j, s;
+printf("entere la taille des L de t");
+scanf("%d",&n);
+printf("entere la taille des C de t");
+scanf("%d",&m);
+for (i=0;i&lt;n;i++){
+for (j=0;j&lt;m;j++){
+printf("t[%d][%d]",i,j);
+scanf("%d",&t[i][j]);}}
+for(i = 0; i &lt; n; i++) {
+for(j = 0; j &lt; m; j++) {
+s=0;
+for( a = 1; a &lt;(t[i][j]); a++) {
+if(t[i][j] % a== 0) {s=s+a; }
+}
+if(s == t[i][j]) {printf("%d est un nombre parfait.\n",
+t[i][j]);}
+}
+}
+return 0;}
+</code>
+</pre>
+           <b><p>4.1.Ecrire une fonction premier qui détermine les nombres
+            premiers dans un vecteur.</p></b>
+<pre>
+<code>
+#include &lt;stdio.h&gt;
+int premier(int t[], int n){
+int i, j, a;
+for(i = 0; i &lt; n; i++) {
+a=1;
+for(j = 2; j &lt; t[i]; j++) {
+if(t[i]%j== 0){a=0;}}
+if(a==1 && t[i]>2) {printf("%d ,",t[i]);}}
+return t[i];
+}
+int main()
+{
+int x=100,t[x],n,i,j;
+printf("entere la taill de t");
+scanf("%d",&n);
+for (i=0;i&lt;n;i++){
+printf("t[%d]",i);
+scanf("%d",&t[i]); }
+printf("les nombres premiers est ;\n");
+premier(t,n);
+return 0;}
+</code>
+</pre>
+           <b><p> Ecrire une fonction semi_premier qui détermine les nombres semi
+            premiers dans un vecteur.</p></b>
+<pre>
+<code>
+
+</code>
+</pre>
+            <b><p>5 .1.Ecrire une fonction qui détermine si un mot est un palindrome</p></b>
+            
+<pre>
+<code>
+
+</code>
+</pre>
+        <b><p>Ecrire un programme qui lit deux mots et qui détermine s’il sont
+            anagramme.</p></b>
+            
+<pre>
+<code>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+void ch(char m[]) {
+int i, j, n = strlen(m);
+char a;
+for(i = 0; i &lt; n-1; i++) {
+for(j = i+1; j &lt; n; j++) {
+if(m[i] > m[j]) {
+a = m[i];
+m[i] = m[j];
+m[j] =a ;}
+}
+}
+}
+int anagramme(char m1[], char m2[]) {
+int i,n = strlen(m1);
+ch(m1);
+ch(m2);
+for(i = 0; i&lt; n; i++) {
+if(m1[i] != m2[i]) {
+return 0;
+}
+}
+return 1;
+}
+int main() {
+char m1[100], m2[100];
+printf("entrer 1er mot : ");
+scanf("%s", m1);
+printf("entrer 2eme mot : ");
+scanf("%s", m2);
+if(anagramme(m1, m2)) {
+printf("les deux mot sont des anagrammes.\n");} else {
+printf("les deux mot ne sont pas des anagrammes.\n");
+}
+return 0;
+}
+</code>
+</pre>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="mailto:bochra.tahraoui@univ-bouira.dz" target="_blank" title="go to"><i
+                            class="fas fa-envelope"></i> Gmail</a></li>
+                <li><a href="https://github.com/bochraT03" target="_blank" title="go to"><i class="fab fa-github"></i>
+                        GitHub</a></li>
+                <li><a href="https://t.me/cp_disb" target="_blank" title="go to"><i class="fab fa-telegram"></i>
+                        Telegram</a></li>
+            </ul>
+        </nav>
+        <p>Copyright&copy; 2023 uxr</p>
+    </footer>
+</body>
+
+</html>

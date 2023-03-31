@@ -1,0 +1,163 @@
+
+header {
+    background-color: #46334a;
+    font-family: monospace;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    body {
+        background-image: url('prooguxr-logo7.png');
+        background-attachment: fixed;
+        font-family: monospace;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+header h1 {
+    font-size: 40px;
+    margin: 0;
+}
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+header nav ul li {
+    margin-left: 20px;
+}
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+header nav ul li a:hover {
+    color: #00bcd4;
+}
+main {
+    padding: 40px;
+}
+pre {
+    color: #cbc9c9;
+            border: 1px solid #ddd;
+            font-size: 18px;
+            line-height: 1.4;
+            padding: 10px;
+            overflow-x: auto;
+          }
+          
+code {
+            font-family: Consolas, Monaco, 'Andale Mono', monospace;
+            font-size: 18px;
+          }
+         
+footer {
+    color: #6d6a6a;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position:fixed;
+}
+footer nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+footer nav ul li {
+    margin-left: 20px;
+}
+footer nav ul li a {
+    color: #a47baa;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+footer nav ul li a:hover {
+    color: #00bcd4;
+}
+footer p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+section h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: #d5d3d3;
+}
+section p{
+    color: #fffdfd;
+    font-family: monospace;
+    font-size: 20px;}
+section B p{
+        color: #e4a5e1;
+        font-family: monospace;
+        font-size: 20px;} 
+ 
+section ul li {
+    margin-bottom: 20px;
+    color: aliceblue;
+}
+section ul li a {
+    color: #cbc9c9;
+    text-decoration: none;
+    font-size: 30px;
+    transition: all 0.3s ease;
+}
+section ul li a:hover {
+    color: #00bcd4;
+}
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.social-media-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+.social-media-icons a:hover {
+    background-color: #00bcd4;
+    color: #fff;
+}
+
+.social-media-icons a i {
+    line-height: inherit;
+}
+
+.social-media-icons a i.fa-github {
+    color: #333;
+}
+
+.social-media-icons a i.fa-telegram {
+    color: #0088cc;
+}
+
+.social-media-icons a i.fa-envelope {
+    color: #c71616;
+}
+.fothere {
+    background-color: #fff;
+}
+
+
