@@ -10,7 +10,7 @@ header {
 }
 body {
     background-image: url('prooguxr-logo7.png');
-    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    font-family: monospace;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
