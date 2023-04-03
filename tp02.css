@@ -1,29 +1,32 @@
 header {
     background-color: #46334a;
-    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    font-family: monospace;
     color: #fff;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-attachment: fixed;
 }
+
 body {
     background-image: url('prooguxr-logo7.png');
-   font-family: monospace;
+    font-family: monospace;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
+
 header h1 {
-    font-size: 30px;
+    font-size: 40px;
     margin: 0;
+    font-family: monospace;
 }
+
 header nav ul {
-    list-style:none;
+    list-style: none;
     margin: 0;
     padding: 0;
-    display:flex;
+    display: flex;
 }
 
 header nav ul li {
@@ -36,23 +39,42 @@ header nav ul li a {
     font-size: 20px;
     transition: all 0.3s ease;
 }
+
 header nav ul li a:hover {
     color: #00bcd4;
 }
+
 main {
     padding: 40px;
 }
+
+pre {
+    color: #cbc9c9;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    line-height: 1.4;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+code {
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    font-size: 18px;
+}
+
 footer {
-    color: #888787;
+    color: #6d6a6a;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
+    position: fixed;
 }
+
 footer nav ul {
     list-style: none;
     margin: 0;
@@ -80,38 +102,48 @@ footer p {
     font-size: 16px;
     font-weight: bold;
 }
-section {
-    margin-bottom: 40px;
-}
 
 section h2 {
-    font-size: 80px;
+    font-size: 35px;
     margin-bottom: 20px;
-    color: #604864;
-    position:relative;
-    text-align: center;
+    color: #d5d3d3;
+}
+
+section p {
+    color: #fffdfd;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+section B p {
+    color: #e4a5e1;
+    font-family: monospace;
+    font-size: 20px;
 }
 
 section ul li {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: aliceblue;
 }
 
 section ul li a {
-    color: #c4c1c1;
+    color: #cbc9c9;
     text-decoration: none;
     font-size: 30px;
     transition: all 0.3s ease;
 }
+
 section ul li a:hover {
     color: #00bcd4;
 }
+
 .social-media-icons {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
 }
+
 .social-media-icons a {
     display: inline-block;
     width: 40px;
@@ -125,19 +157,28 @@ section ul li a:hover {
     font-size: 20px;
     transition: all 0.3s ease;
 }
+
 .social-media-icons a:hover {
     background-color: #00bcd4;
     color: #fff;
 }
+
 .social-media-icons a i {
     line-height: inherit;
 }
+
 .social-media-icons a i.fa-github {
     color: #333;
 }
+
 .social-media-icons a i.fa-telegram {
     color: #0088cc;
 }
+
 .social-media-icons a i.fa-envelope {
     color: #c71616;
+}
+
+.fothere {
+    background-color: #fff;
 }
