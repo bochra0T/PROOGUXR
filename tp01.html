@@ -85,34 +85,62 @@ for (j=0;j&lt;=n;j++){
 printf("t[%d] =%d \n",j,t[j]);}
 return 0;
 }
+
 </code>
 </pre>
+
             <b> <p> Ecrire un programme qui permet d éclater le vecteur T1 en
                 deux vecteurs T pair T Impair contenant successivement les
                 nombres pair et impair.</p></b>
 <pre>
 <code>
-
+   
 </code>
 </pre>
+
             <b> <p>  Ecrire un programme qui permet de déterminer les
                 positions (les position non pas les valeurs) de Min et Max
-                dans T2.</p>  </b>
+                dans T2.</p> </b>
 <pre>
     <code>
 
     </code>
 </pre>
+
              <b>  <p>Ecrire un programme qui permet de calculer la moyenne
                 des valeurs situé dans le diagonal de T2.</p></b>
 <pre>
     <code>
-
+        #include&lt;stdio.h&gt;
+            int main()
+            {
+            int x=100,y=100,n;
+            int t2[x][y];
+            int j,i; 
+            float s,M;
+            printf("entere la taill de t2");
+            scanf("%d",&n);
+            for(i=0;ivn;i++){
+            for(j=0;j&lt;n;j++){
+            printf("la case t2[%d][%d]= ",i,j);
+            scanf("%d",&t2[i][j]);}}
+            s=0;
+            for(i=0;i&lt;n;i++){
+            for(j=0;j&lt;n;j++){
+             if (i==j){
+            s=s+t2[i][j];
+             }}
+            M =s/n;}
+            printf("la moyenne des valeurs situé dans le diagonal de T2. %f  ",M);
+            return 0; }
+            
     </code>
 </pre>
+
         </section>     
     </main>
     <footer>
+        <p>Copyright&copy; 2023 uxr</p>
         <nav>
             <ul>
                 <li><a href="mailto:bochra.tahraoui@univ-bouira.dz" target="_blank" title="go to"><i
@@ -123,7 +151,6 @@ return 0;
                         Telegram</a></li>
             </ul>
         </nav>
-        <p>Copyright&copy; 2023 uxr</p>
     </footer>
 </body>
 

@@ -2,7 +2,7 @@ header {
     background-color: #46334a;
     font-family: Consolas, Monaco, 'Andale Mono', monospace;
     color: #fff;
-    padding: 20px;
+    padding: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,7 +16,7 @@ body {
     background-attachment: fixed;
 }
 header h1 {
-    font-size: 30px;
+    font-size: 40px;
     margin: 0;
 }
 header nav ul {
@@ -65,7 +65,7 @@ footer nav ul li {
 }
 
 footer nav ul li a {
-    color: #a47baa;
+    color: #a79da9;
     text-decoration: none;
     font-size: 20px;
     transition: all 0.3s ease;

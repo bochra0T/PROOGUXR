@@ -49,19 +49,20 @@ main {
 }
 
 pre {
-    color: #cbc9c9;
-    border: 1px solid #ddd;
-    font-size: 18px;
+    background-color: #422741;
+    color: #ffff;
+    border:2px solid #fff;
+    font-size:auto;
     line-height: 1.4;
     padding: 10px;
     overflow-x: auto;
+    margin: 250px;
 }
 
 code {
-    font-family: Consolas, Monaco, 'Andale Mono', monospace;
-    font-size: 18px;
+    font-family: monospace;
+    font-size: 20px;
 }
-
 footer {
     color: #6d6a6a;
     padding: 20px;
@@ -116,7 +117,7 @@ section p {
 }
 
 section B p {
-    color: #e4a5e1;
+    color: #fffeff;
     font-family: monospace;
     font-size: 20px;
 }
