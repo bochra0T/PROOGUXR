@@ -165,7 +165,7 @@ pre {
     font-family: "Courier New", Courier, monospace;
     padding: 1em;
     word-wrap: break-word;
-    margin: 100px;
+    margin: 150px;
     border: 2px solid #00bcd4;
   }
   pre code {
@@ -173,6 +173,6 @@ pre {
   }
   pre code.language-c {
     color: #ffeafc;
-    font-size: 30px;
+    font-size: 20px;
   }
   
