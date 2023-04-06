@@ -47,22 +47,6 @@ header nav ul li a:hover {
 main {
     padding: 40px;
 }
-
-pre {
-    background-color: #422741;
-    color: #ffff;
-    border:2px solid #fff;
-    font-size:auto;
-    line-height: 1.4;
-    padding: 10px;
-    overflow-x: auto;
-    margin: 250px;
-}
-
-code {
-    font-family: monospace;
-    font-size: 20px;
-}
 footer {
     color: #6d6a6a;
     padding: 20px;
@@ -115,13 +99,6 @@ section p {
     font-family: monospace;
     font-size: 20px;
 }
-
-section B p {
-    color: #fffeff;
-    font-family: monospace;
-    font-size: 20px;
-}
-
 section ul li {
     margin-bottom: 20px;
     color: aliceblue;
@@ -183,3 +160,19 @@ section ul li a:hover {
 .fothere {
     background-color: #fff;
 }
+pre {
+    border-radius: 4px;
+    font-family: "Courier New", Courier, monospace;
+    padding: 1em;
+    word-wrap: break-word;
+    margin: 150px;
+    border: 2px solid #00bcd4;
+  }
+  pre code {
+    color: #fffdfd;
+  }
+  pre code.language-c {
+    color: #ffeafc;
+    font-size: 30px;
+  }
+  
