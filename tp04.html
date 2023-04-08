@@ -22,29 +22,29 @@
                     nulles dans un vecteur. </p> </B> 
 <pre>
 <code class="language-c">
-    #include &lt;stdio.h&gt;
+#include &lt;stdio.h&gt;
 
-        int main() {
-            int x = 100, t[x], n, i, j;
-            printf("Enter the size of t ");
-            scanf("%d", &n);
-            for (i = 0; i  &lt; n; i++) {
-                printf("t[%d] = ", i);
-                scanf("%d", &t[i]);
-            }
-            j = 0;
-            for (i = 0; i  &lt; n; i++) {
-                if (t[i] != 0) {
-                    t[j] = t[i];
-                    j++;
-                }
-            }
-            for (i = 0; i  &lt; j; i++) {
-                printf("t[%d] = %d\n", i, t[i]);
-            }
-            return 0;
+    int main() {
+        int x = 100, t[x], n, i, j;
+        printf("Enter the size of t ");
+        scanf("%d", &n);
+        for (i = 0; i  &lt; n; i++) {
+            printf("t[%d] = ", i);
+            scanf("%d", &t[i]);
         }
-        
+        j = 0;
+        for (i = 0; i  &lt; n; i++) {
+            if (t[i] != 0) {
+                t[j] = t[i];
+                j++;
+            }
+        }
+        for (i = 0; i  &lt; j; i++) {
+            printf("t[%d] = %d\n", i, t[i]);
+        }
+        return 0;
+    }
+    
 </code>
 </pre>
             <b><p>Ecrire un programme permettant de supprimer toutes les colonnes
@@ -57,72 +57,72 @@
 parfait dans une matrice.</p></b>
 <pre>
 <code class="language-c">
-    #include &lt;stdio.h&gt;
-
-    int main() {
-        int x = 100, y = 100, t[x][y], m, n, i, j, s, a;
-        printf("Enter the number of rows for the l: ");
-        scanf("%d", &n);
-        printf("Enter the number of columns for the c: ");
-        scanf("%d", &m);
-        for (i = 0; i &lt; n; i++) {
-            for (j = 0; j &lt; m; j++) {
-                printf("t[%d][%d] = ", i, j);
-                scanf("%d", &t[i][j]);
-            }
+#include &lt;stdio.h&gt;
+ int main() {
+    int x = 100, y = 100, t[x][y], m, n, i, j, s, a;
+    printf("Enter the number of rows for the l: ");
+    scanf("%d", &n);
+    printf("Enter the number of columns for the c: ");
+    scanf("%d", &m);
+    for (i = 0; i &lt; n; i++) {
+        for (j = 0; j &lt; m; j++) {
+            printf("t[%d][%d] = ", i, j);
+            scanf("%d", &t[i][j]);
         }
-        for (i = 0; i &lt; n; i++) {
-            for (j = 0; j &lt; m; j++) {
-                s = 0;
-                for (a = 1; a &lt; t[i][j]; a++) {
-                    if (t[i][j] % a == 0) {
-                        s += a;
-                    }
-                }
-                if (s == t[i][j]) {
-                    printf("%d is a perfect number.\n", t[i][j]);
-                }
-            }
-        }
-        return 0;
     }
-    
+    for (i = 0; i &lt; n; i++) {
+        for (j = 0; j &lt; m; j++) {
+            s = 0;
+            for (a = 1; a &lt; t[i][j]; a++) {
+                if (t[i][j] % a == 0) {
+                    s += a;
+                }
+            }
+            if (s == t[i][j]) {
+                printf("%d is a perfect number.\n", t[i][j]);
+            }
+        }
+    }
+    return 0;
+}
+
 </code>
 </pre>
             <b><p>4.1.Ecrire une fonction premier qui détermine les nombres
             premiers dans un vecteur.</p></b>
 <pre>
     <code class="language-c">
-    #include &lt;stdio.h&gt;
-    void premier(int t[], int n) {
-        int i, j, a;
-        for (i = 0; i &lt; n; i++) {
-            a = 1;
-            for (j = 2; j &lt; t[i]; j++) {
-                if (t[i] % j == 0) {
-                    a = 0;
-                    break;
-                }
+#include &lt;stdio.h&gt;
+void premier(int t[], int n) {
+    int i, j, a;
+    for (i = 0; i &lt; n; i++) {
+        a = 1;
+        for (j = 2; j &lt; t[i]; j++) {
+            if (t[i] % j == 0) {
+                a = 0;
+                break;
             }
-            if (a == 1 && t[i] &gt; 2) {
-                printf("%d ,", t[i]);
-            }
+        }
+        if (a == 1 && t[i] &gt; 2) {
+            printf("%d ,", t[i]);
         }
     }
-    
-    int main() {
-        int t[100], n, i;
-        printf("entrez la taille de t : ");
-        scanf("%d", &n);
-        for (i = 0; i &lt; n; i++) {
-            printf("t[%d] = ", i);          
-            scanf("%d", &t[i]);
-        }
-        printf("les nombres premiers sont : ");
-        premier(t, n);
-        printf("\n");
-        return 0;
-    }</code></pre>
+}
+
+ int main() {
+    int t[100], n, i;
+    printf("entrez la taille de t : ");
+    scanf("%d", &n);
+    for (i = 0; i &lt; n; i++) {
+        printf("t[%d] = ", i);          
+        scanf("%d", &t[i]);
+    }
+    printf("les nombres premiers sont : ");
+    premier(t, n);
+    printf("\n");
+    return 0;
+}
+</code></pre>
 <b><p> Ecrire une fonction semi_premier qui détermine les nombres semi
 premiers dans un vecteur.</p></b>
 <pre>
@@ -141,52 +141,52 @@ premiers dans un vecteur.</p></b>
             anagramme.</p></b>
 <pre>
 <code class="language-c">
-    #include &lt;stdio.h&gt;
-        #include &lt;string.h&gt;
-        
-        void ch(char m[]) {
-            int i, j, n = strlen(m);
-            char a;
-            for(i = 0; i &lt; n-1; i++) {
-                for(j = i+1; j &lt; n; j++) {
-                    if(m[i] &gt; m[j]) {
-                        a = m[i];
-                        m[i] = m[j];
-                        m[j] = a;
-                    }
+#include &lt;stdio.h&gt;
+    #include &lt;string.h&gt;
+    
+    void ch(char m[]) {
+        int i, j, n = strlen(m);
+        char a;
+        for(i = 0; i &lt; n-1; i++) {
+            for(j = i+1; j &lt; n; j++) {
+                if(m[i] &gt; m[j]) {
+                    a = m[i];
+                    m[i] = m[j];
+                    m[j] = a;
                 }
             }
         }
-        
-        int anagramme(char m1[], char m2[]) {
-            int i, n = strlen(m1);
-            if(n != strlen(m2)) {
-                return 0;
-            }
-            ch(m1);
-            ch(m2);
-            for(i = 0; i &lt; n; i++) {
-                if(m1[i] != m2[i]) {
-                    return 0;
-                }
-            }
-            return 1;
-        }
-        
-        int main() {
-            char m1[100], m2[100];
-            printf("entrer 1er mot : ");
-            scanf("%s", m1);
-            printf("entrer 2eme mot : ");
-            scanf("%s", m2);
-            if(anagramme(m1, m2)) {
-                printf("les deux mots sont des anagrammes.\n");
-            } else {
-                printf("les deux mots ne sont pas des anagrammes.\n");
-            }
+    }
+    
+    int anagramme(char m1[], char m2[]) {
+        int i, n = strlen(m1);
+        if(n != strlen(m2)) {
             return 0;
         }
-        
+        ch(m1);
+        ch(m2);
+        for(i = 0; i &lt; n; i++) {
+            if(m1[i] != m2[i]) {
+                return 0;
+            }
+        }
+        return 1;
+    }
+    
+    int main() {
+        char m1[100], m2[100];
+        printf("entrer 1er mot : ");
+        scanf("%s", m1);
+        printf("entrer 2eme mot : ");
+        scanf("%s", m2);
+        if(anagramme(m1, m2)) {
+            printf("les deux mots sont des anagrammes.\n");
+        } else {
+            printf("les deux mots ne sont pas des anagrammes.\n");
+        }
+        return 0;
+}
+    
 </code>
 </pre>
 

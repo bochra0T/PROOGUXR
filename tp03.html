@@ -23,119 +23,115 @@
 				<P> 1/tri par  bulles </P>
 <pre>
 <code  class="language-c">
-	#include &lt;stdio.h&gt;
-
-		void tri_b(int t[]) {
-			int i, j, a;
-			for (i = 0; i &lt;10; i++) {
-				for (j = 0; j &lt; 10-i-1; j++) {
-					if (t[j] &lt; t[j+1]) {
-						a = t[j];
-						t[j] = t[j+1];
-						t[j+1] = a;
-					}
+#include &lt;stdio.h&gt;
+	void tri_b(int t[]) {
+		int i, j, a;
+		for (i = 0; i &lt;10; i++) {
+			for (j = 0; j &lt; 10-i-1; j++) {
+				if (t[j] &lt; t[j+1]) {
+					a = t[j];
+					t[j] = t[j+1];
+					t[j+1] = a;
 				}
 			}
 		}
-		
-		int main() {
-			int j, i, u[10];
-			printf("Les éléments de u sont :\n");
-			for (i = 0; i &lt; 10; i++) {
-				printf("u[%d] = ", i);
-				scanf("%d", &u[i]);
-			}
-			printf("*****\n");
-			tri_b(u);
-			for (i = 0; i &lt; 10; i++) {
-				printf("u[%d] = %d\n", i, u[i]);
-			}
-			return 0;
+	}
+	
+	int main() {
+		int j, i, u[10];
+		printf("Les éléments de u sont :\n");
+		for (i = 0; i &lt; 10; i++) {
+			printf("u[%d] = ", i);
+			scanf("%d", &u[i]);
 		}
-		
+		printf("*****\n");
+		tri_b(u);
+		for (i = 0; i &lt; 10; i++) {
+			printf("u[%d] = %d\n", i, u[i]);
+		}
+		return 0;
+}
 </code>
 </pre>	
 <P> tri par sélection </P>
 
 <pre>
 <code  class="language-c">
-	#include &lt;stdio.h&gt;
+#include &lt;stdio.h&gt;
 
-		void tri_s(int t[]) {
-			int a, i, j;
-			for (i = 0; i &lt; 10; i++) {
-				for (j = i + 1; j &lt; 10; j++) {
-					if (t[i] > t[j]) {
-						a = t[i];
-						t[i] = t[j];
-						t[j] = a;
-					}
+	void tri_s(int t[]) {
+		int a, i, j;
+		for (i = 0; i &lt; 10; i++) {
+			for (j = i + 1; j &lt; 10; j++) {
+				if (t[i] > t[j]) {
+					a = t[i];
+					t[i] = t[j];
+					t[j] = a;
 				}
 			}
 		}
-		
-		int main() {
-			int i, u[10];
-			printf("les elem de u est \n");
-			for (i = 0; i &lt; 10; i++) {
-				printf("u[%d]", i);
-				scanf("%d", &u[i]);
-			}
-			printf("*****\n");
-		
-			tri_s(u);
-		
-			for (i = 0; i &lt;10; i++) {
-				printf("u[%d]=%d \n", i, u[i]);
-			}
-			return 0;
+	}
+	
+	int main() {
+		int i, u[10];
+		printf("les elem de u est \n");
+		for (i = 0; i &lt; 10; i++) {
+			printf("u[%d]", i);
+			scanf("%d", &u[i]);
 		}
-		
+		printf("*****\n");
+	
+		tri_s(u);
+	
+		for (i = 0; i &lt;10; i++) {
+			printf("u[%d]=%d \n", i, u[i]);
+		}
+		return 0;
+}
 </code>
 </pre>
 <p> tri par insertion</p>
 
 <pre>
 <code class="language-c">
-	#include &lt;stdio.h&gt;
+#include &lt;stdio.h&gt;
 
-		void tri_i(int t[], int n) {
-			int i, j, b;
-			for (i = 1; i &lt; n; i++) {
-				b = t[i];
-				j = i - 1;
-				while (j &gt;= 0 && t[j] &lt; b) {
-					t[j + 1] = t[j];
-					j--;
-				}
-				t[j + 1] = b;
+	void tri_i(int t[], int n) {
+		int i, j, b;
+		for (i = 1; i &lt; n; i++) {
+			b = t[i];
+			j = i - 1;
+			while (j &gt;= 0 && t[j] &lt; b) {
+				t[j + 1] = t[j];
+				j--;
 			}
+			t[j + 1] = b;
 		}
-		
-		int main() {
-			int n, i;
-			printf("entrer la taille de u : ");
-			scanf("%d", &n);
-			int u[n]; 
-			printf("les elements de u sont :\n");
-			for (i = 0; i &lt; n; i++) {
-				printf("u[%d] : ", i);
-				scanf("%d", &u[i]);
-			}
-			printf("\n");
-			printf("avant le tri :\n");
-			for (i = 0; i &lt; n; i++) {
-				printf("u[%d] = %d\n", i, u[i]);
-			}
-			printf("\n");
-			tri_i(u, n);
-			printf("apres le tri :\n");
-			for (i = 0; i &lt; n; i++) {
-				printf("u[%d] = %d\n", i, u[i]);
-			}
-			return 0;
+	}
+	
+	int main() {
+		int n, i;
+		printf("entrer la taille de u : ");
+		scanf("%d", &n);
+		int u[n]; 
+		printf("les elements de u sont :\n");
+		for (i = 0; i &lt; n; i++) {
+			printf("u[%d] : ", i);
+			scanf("%d", &u[i]);
 		}
-		
+		printf("\n");
+		printf("avant le tri :\n");
+		for (i = 0; i &lt; n; i++) {
+			printf("u[%d] = %d\n", i, u[i]);
+		}
+		printf("\n");
+		tri_i(u, n);
+		printf("apres le tri :\n");
+		for (i = 0; i &lt; n; i++) {
+			printf("u[%d] = %d\n", i, u[i]);
+		}
+		return 0;
+}
 </code>
 </pre>
 			

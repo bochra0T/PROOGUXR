@@ -26,38 +26,38 @@
                     succession de deux valeurs particulier dans T1.</p> </B> 
 <pre>
 <code class="language-c" >
-    #include &lt;stdio.h&gt;
+#include &lt;stdio.h&gt;
 
-        int main() {
-            int n=100;
-            int t[n];
-            int v2,v1,x,i;
-            printf("entrer n: ");
-            scanf("%d",&n);
-            x=0;
-            for(i=0;i&lt;n;i++){
-                printf("t[%d]: ",i);
-                scanf("%d",&t[i]);
-            }
-            printf("entrer v1: ");
-            scanf("%d",&v1);
-            printf("entrer v2: ");
-            scanf("%d",&v2);
-            for (i=0;i&lt;n-1;i++){
-                if (v1==t[i] && v2==t[i+1]){
-                    x=x+1;
-                }
-                if (v1==t[i+1] && v2==t[i]){
-                    x=x+1;
-                }
-            }
-            if (x&gt;0){
-                printf("le nombre de succession de v1=%d et v2=%d est %d\n",v1,v2,x);
-            } else {
-                printf("v1=%d et v2=%d ne sont pas successifs dans le tableau\n",v1,v2);
-            }
-            return 0;
+ int main() {
+    int n=100;
+    int t[n];
+    int v2,v1,x,i;
+    printf("entrer n: ");
+    scanf("%d",&n);
+    x=0;
+    for(i=0;i&lt;n;i++){
+        printf("t[%d]: ",i);
+        scanf("%d",&t[i]);
+    }
+    printf("entrer v1: ");
+    scanf("%d",&v1);
+    printf("entrer v2: ");
+    scanf("%d",&v2);
+    for (i=0;i&lt;n-1;i++){
+        if (v1==t[i] && v2==t[i+1]){
+            x=x+1;
         }
+        if (v1==t[i+1] && v2==t[i]){
+            x=x+1;
+        }
+    }
+    if (x&gt;0){
+        printf("NB succession de v1=%d et v2=%d est %d\n",v1,v2,x);
+    } else {
+        printf("v1=%d et v2=%d ne sont pas successifs \n",v1,v2);
+    }
+    return 0;
+}
         
 </code>
 </pre>
@@ -69,43 +69,43 @@
                 
 <pre>
 <code class="language-c" >
-    #include &lt;stdio.h&gt;
+#include &lt;stdio.h&gt;
 
-        int main() {
-            int n;
-            printf("Entrez la taille de T1 : ");
-            scanf("%d", &n);
-        
-            int T1[n];
-            printf("Entrez les valeurs de T1 :\n");
-            for (int i = 0; i &lt; n; i++) {
-                printf("T1[%d] = ", i);
-                scanf("%d", &T1[i]);
-            }
-        
-            int i = 0, j = n - 1;
-            while (i &lt;j) {
-                while (T1[i]&lt; 0 && i &lt; n) {
-                    i++;
-                }
-                while (T1[j]&gt;= 0 && j &gt;= 0) {
-                    j--;
-                }
-                if (i &lt;j) {
-                    int temp = T1[i];
-                    T1[i] = T1[j];
-                    T1[j] = temp;
-                }
-            }
-        
-            printf("T1 après le tri :\n");
-            for (int i = 0; i&lt; n; i++) {
-                printf("T1[%d] = %d\n", i, T1[i]);
-            }
-        
-            return 0;
+    int main() {
+        int n;
+        printf("Entrez la taille de T1 : ");
+        scanf("%d", &n);
+    
+        int T1[n];
+        printf("Entrez les valeurs de T1 :\n");
+        for (int i = 0; i &lt; n; i++) {
+            printf("T1[%d] = ", i);
+            scanf("%d", &T1[i]);
         }
-        
+    
+        int i = 0, j = n - 1;
+        while (i &lt;j) {
+            while (T1[i]&lt; 0 && i &lt; n) {
+                i++;
+            }
+            while (T1[j]&gt;= 0 && j &gt;= 0) {
+                j--;
+            }
+            if (i &lt;j) {
+                int temp = T1[i];
+                T1[i] = T1[j];
+                T1[j] = temp;
+            }
+        }
+    
+        printf("T1 après le tri :\n");
+        for (int i = 0; i&lt; n; i++) {
+            printf("T1[%d] = %d\n", i, T1[i]);
+        }
+    
+        return 0;
+    }
+    
 </code>
 </pre>
 
@@ -114,40 +114,40 @@
                 nombres pair et impair.</p></b>
 <pre>
 <code class="language-c">
-    #include &lt;stdio.h&gt;
-        int main() {
-          int x = 100;
-          int u[x], up[x], ui[x];
-          int i, j, n, k;
-          k = 0;
-          j = 0;
-          printf(" enetrer la taill de u");
-          scanf("%d", &n);
-          for (i = 0; i&lt; n; i++) {
-            printf("u[%d]=", i);
-            scanf("%d", &u[i]);
-          }
-          for (i = 0; i &lt; n; i++) {
-            if (u[i] % 2 == 0) { 
-              up[k] = u[i];
-              k++; 
-            } 
-            else {
-              ui[j] = u[i];
-              j++;
-            }
-          }
-          printf("\nVecteur des nombres pairs : ");
-          for (i = 0; i &lt; k; i++) { 
-            printf("%d ", up[i]); 
-          }
-          printf("\nVecteur des nombres impairs : ");
-          for (i = 0; i &lt; j; i++) { 
-            printf("%d ", ui[i]); 
-          }
-          return 0;
+#include &lt;stdio.h&gt;
+    int main() {
+        int x = 100;
+        int u[x], up[x], ui[x];
+        int i, j, n, k;
+        k = 0;
+        j = 0;
+        printf(" enetrer la taill de u");
+        scanf("%d", &n);
+        for (i = 0; i&lt; n; i++) {
+        printf("u[%d]=", i);
+        scanf("%d", &u[i]);
         }
-        
+        for (i = 0; i &lt; n; i++) {
+        if (u[i] % 2 == 0) { 
+            up[k] = u[i];
+            k++; 
+        } 
+        else {
+            ui[j] = u[i];
+            j++;
+        }
+        }
+        printf("\nVecteur des nombres pairs : ");
+        for (i = 0; i &lt; k; i++) { 
+        printf("%d ", up[i]); 
+        }
+        printf("\nVecteur des nombres impairs : ");
+        for (i = 0; i &lt; j; i++) { 
+        printf("%d ", ui[i]); 
+        }
+        return 0;
+    }
+    
 </code>
 </pre>
 
@@ -155,46 +155,80 @@
                 positions (les position non pas les valeurs) de Min et Max
                 dans T2.</p> </b>
 <pre>
-    <code class="language-c">
+ <code class="language-c">
+#include&LT;stdio.h&GT;
+ int main()
+ {
+    int t2[5][5];
+    int j,i,x,y,z,k,min,max;
+        min =t2[0][0];
+        max=t2[0][0];
 
+    for(i=0;i&LT;5;i++){
+         for(j=0;j&LT;5;j++){
+        printf("la case t2[%d][%d]= ",i,j);
+        scanf("%d",&t2[i][j]);
+        }
+    }
+
+    for(i=0;i&LT;5;i++){
+        for(j=0;j&LT;;j++){
+              if(max&LT;t2[i][j]){
+                    max=t2[i][j];
+                    x=i;
+                    y=j;
+                 }
+              if(min&GT;t2[i][j]){
+                    min=t2[i][j];
+                    z=i;
+                    k=j;
+                 }
+        }  
+    }
+
+        printf("le max et %d dans la linge %d et colone %d \n",max,x,y);
+
+        printf("le min et %d dans la linge %d et colone %d ",min,z,k);
+ return 0;
+}
     </code>
 </pre>
 
              <b>  <p>Ecrire un programme qui permet de calculer la moyenne
                 des valeurs situé dans le diagonal de T2.</p></b>
-<pre>
+    <pre>
     <code class="language-c">
-        #include&lt;stdio.h&gt;
+#include&lt;stdio.h&gt;
 
-        int main()
-        {
-            int x=100,y=100,n;
-            int t2[x][y];
-            int j,i;
-            float s,M;
-    
-            printf("Entrez la taille de t2: ");
-            scanf("%d",&n);
-    
-            for(i=0;i&lt;n;i++){
-                for(j=0;j&lt;n;j++){
-                    printf("Entrez la valeur de t2[%d][%d]: ",i,j);
-                    scanf("%d",&t2[i][j]);
-                }
-            }
-    
-            s=0;
-            for(i=0;i&lt;n;i++){
-                for(j=0;j&lt;n;j++){
-                    if (i==j){
-                        s=s+t2[i][j];
-                    }
-                }
-            }
-            M =s/n;
-            printf("La moyenne des valeurs situées dans la diagonale de T2 est %f", M);
-            return 0;
+ int main()
+ {
+    int x=100,y=100,n;
+    int t2[x][y];
+    int j,i;
+    float s,M;
+
+    printf("Entrez la taille de t2: ");
+    scanf("%d",&n);
+
+    for(i=0;i&lt;n;i++){
+        for(j=0;j&lt;n;j++){
+            printf("Entrez la valeur de t2[%d][%d]: ",i,j);
+            scanf("%d",&t2[i][j]);
         }
+    }
+
+    s=0;
+    for(i=0;i&lt;n;i++){
+        for(j=0;j&lt;n;j++){
+            if (i==j){
+                s=s+t2[i][j];
+            }
+        }
+    }
+    M =s/n;
+    printf("La moyenne  diagonale de T2 est %f", M);
+    return 0;
+}
         </code>
     </pre>
  </section>     
