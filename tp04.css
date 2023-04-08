@@ -161,6 +161,8 @@ section ul li a:hover {
     background-color: #fff;
 }
 pre {
+    background-color: #46334a;
+    background-attachment: fixed;
     border-radius: 4px;
     font-family: "Courier New", Courier, monospace;
     padding: 1em;
@@ -171,7 +173,6 @@ pre {
     color: #fffdfd;
   }
   pre code.language-c {
-    color: #ffeafc;
+    color: #ffffff;
     font-size: 20px;
   }
-  

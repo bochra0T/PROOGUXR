@@ -18,9 +18,9 @@
     <main>
         <section>
             <P> la SOLUTION </P>
-             <b><p>Ecrire un programmes permettant de supprimer toutes les valeures
-                    nulles dans un vecteur. </p> </B> 
-<pre>
+             <p>Exercice1 :Ecrire un programmes permettant de supprimer toutes les valeures
+                nulles dans un vecteur. </p> 
+<b><pre>
 <code class="language-c">
 #include &lt;stdio.h&gt;
 
@@ -47,15 +47,61 @@
     
 </code>
 </pre>
-            <b><p>Ecrire un programme permettant de supprimer toutes les colonnes
-                identiques dans une matrices.</p></b>
- <pre>
-<code>
+</b>
+            <p>Exercice2 :Ecrire un programme permettant de supprimer toutes les colonnes
+                identiques dans une matrices.</p>
+<b> <pre>
+<code class="language-c">
+#include &lt;stdio.h&gt;
+
+    int main()
+    {   int x=100;
+        int M[x][x];
+        int n, m, i, j, k,I;
+    
+        printf("Entrez le nombre de lignes : ");
+        scanf("%d", &n);
+        printf("Entrez le nombre de colonnes : ");
+        scanf("%d", &m);
+        for (i = 0; i &lt; n; i++) {
+            for (j = 0; j &lt; m; j++) {
+                printf("M[%d][%d] ",i,j);
+                scanf("%d", &M[i][j]);
+            }
+        }
+        for (j = 0; j &lt; m; j++) {
+            I= 1;
+            for (i = 1; i &lt; n; i++) {
+                if (M[i][j] != M[0][j]) {
+                    I = 0;
+                    break;
+                }
+            }
+            if (I) {
+                for (k = j; k &lt; m - 1; k++) {
+                    for (i = 0; i &lt; n; i++) {
+                        M[i][k] = M[i][k + 1];
+                    }
+                }
+                m--;
+                j--;
+            }
+        }
+        printf("Matrice sans les colonnes identiques :\n");
+        for (i = 0; i &lt; n; i++) {
+            for (j = 0; j &lt; m; j++) {
+                printf("%d ", M[i][j]);
+            }
+            printf("\n");
+        }
+        return 0;
+    }
+
 </code>
-</pre>
-<b><p>Ecrire un programmes permettant d’afficher toutes les nombres
-parfait dans une matrice.</p></b>
-<pre>
+</pre></b>
+<p>Exercices3 :Ecrire un programmes permettant d’afficher toutes les nombres
+    parfait dans une matrice.</p>
+    <b><pre>
 <code class="language-c">
 #include &lt;stdio.h&gt;
  int main() {
@@ -73,13 +119,13 @@ parfait dans une matrice.</p></b>
     for (i = 0; i &lt; n; i++) {
         for (j = 0; j &lt; m; j++) {
             s = 0;
-            for (a = 1; a &lt; t[i][j]; a++) {
+         for (a = 1; a &lt; t[i][j]; a++) {
                 if (t[i][j] % a == 0) {
                     s += a;
                 }
             }
-            if (s == t[i][j]) {
-                printf("%d is a perfect number.\n", t[i][j]);
+         if (s == t[i][j]) {
+         printf("%d is a perfect number.\n", t[i][j]);
             }
         }
     }
@@ -87,10 +133,10 @@ parfait dans une matrice.</p></b>
 }
 
 </code>
-</pre>
-            <b><p>4.1.Ecrire une fonction premier qui détermine les nombres
-            premiers dans un vecteur.</p></b>
-<pre>
+</pre></b>
+            <p>Exercice 4 : 4.1.Ecrire une fonction premier qui détermine les nombres
+                premiers dans un vecteur.</p>
+                <b><pre>
     <code class="language-c">
 #include &lt;stdio.h&gt;
 void premier(int t[], int n) {
@@ -123,23 +169,47 @@ void premier(int t[], int n) {
     return 0;
 }
 </code></pre>
-<b><p> Ecrire une fonction semi_premier qui détermine les nombres semi
-premiers dans un vecteur.</p></b>
+<b><p></p></b>
 <pre>
 <code>
 
 </code>
-</pre>
-            <b><p>5 .1.Ecrire une fonction qui détermine si un mot est un palindrome</p></b>
+</pre></b>
+           <p> Exercice5 :5 .1.Ecrire une fonction qui détermine si un mot est un palindrome</p>
             
-<pre>
-<code>
-
+            <b><pre>
+<code class="language-c">
+#include &lt;stdio.h&gt;
+    #include  &lt;string.h&gt;
+    int palindrome(char mot[]) {
+        int i, j;
+        int M = strlen(mot);
+        for (i = 0, j = M - 1; i  &lt; j; i++, j--) {
+        if (mot[i] != mot[j]) {
+         return 0; 
+        }
+        }
+         return 1; 
+    }
+    int main() {
+        int x=100;
+        char mot[x];
+        printf("Entrez un mot : ");
+        scanf("%s", mot);
+        if (palindrome(mot)) {
+        printf("Le mot %s est un palindrome.\n", mot);
+        } else {
+        printf("Le mot %s n'est pas un pldrm.\n", mot);
+        }
+    
+        return 0;
+    }
+        
 </code>
-</pre>
-        <b><p>Ecrire un programme qui lit deux mots et qui détermine s’il sont
-            anagramme.</p></b>
-<pre>
+</pre></b>
+        <p>5.2.Ecrire un programme qui lit deux mots et qui détermine s’il sont
+            anagramme.</p>
+            <b><pre>
 <code class="language-c">
 #include &lt;stdio.h&gt;
     #include &lt;string.h&gt;
@@ -175,20 +245,23 @@ premiers dans un vecteur.</p></b>
     
     int main() {
         char m1[100], m2[100];
+
         printf("entrer 1er mot : ");
         scanf("%s", m1);
+
         printf("entrer 2eme mot : ");
         scanf("%s", m2);
-        if(anagramme(m1, m2)) {
-            printf("les deux mots sont des anagrammes.\n");
-        } else {
-            printf("les deux mots ne sont pas des anagrammes.\n");
-        }
+
+     if(anagramme(m1, m2)) {
+        printf("les deux mots sont des anagrammes.\n");
+     } else {
+        printf("les deux mots ne sont pas des angr.\n");
+     }
         return 0;
 }
     
 </code>
-</pre>
+</pre></b>
 
 
         </section>

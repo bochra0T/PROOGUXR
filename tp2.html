@@ -19,66 +19,8 @@
     </header>
     <main>
 <section>
-<b> <p> Ecrire une fonction/procédure qui permet de déterminer si deux
-matrices sont identiques.</p></b>
-<pre>
-<code CLASS="language-c">
-#include&lt;stdio.h&gt;
-
-void identiques(int x[100][100], int y[100][100], int n, int m) {
-int a, i, j;
-a = 0;
-    for (i = 0; i &lt;n; i++) {
-     for (j = 0; j &lt; m; j++) {
-        if (x[i][j] == y[i][j]) {
-        a = a + 1;
-        }
-        }
-        }
-  if (a &Gt;= (n * m)) {
-    printf("Les deux matrices sont identiques.\n");
-  } else {
-    printf("Les deux matrices ne sont pas identiques.\n");
-    }
-    }
-
-int main() {
-int n, m, i, j;
-int t[100][100], u[100][100];
-
-    printf("Entrez n : ");
-    scanf("%d", &n);
-
-    printf("Entrez m : ");
-    scanf("%d", &m);
-
-// Entrer les éléments de la première matrice
-    printf("Entrez les éléments de la première matrice :\n");
-    for (i = 0; i &lt; n; i++) {
-    for (j = 0; j &lt; m; j++) {
-    printf("t[%d][%d] : ", i, j);
-    scanf("%d", &t[i][j]);
-    }
-    }
-
-// Entrer les éléments de la deuxième matrice
-    printf("Entrez les éléments de la deuxième matrice :\n");
-    for (i = 0; i &lt;n; i++) {
-    for (j = 0; j &lt; m; j++) {
-    printf("u[%d][%d] : ", i, j);
-    scanf("%d", &u[i][j]);
-    }
-    }
-
-// Appeler la fonction identiques
-identiques(t, u, n, m);
-
-return 0;
-}
-
-</code>
-</pre>
-<P>Soit T un vecteur ,écrire une fonction/procédure qui permet d’inverser l’ordre des éléments de T sans utiliser un autre vecteur. </P>
+    <P>Exercices 1 :Soit T un vecteur ,écrire une fonction/procédure qui permet
+        d’inverser l’ordre des éléments de T sans utiliser un autre vecteur. </P>
 <pre>
 <code class="language-c">
 #include&lt;stdio.h&GT:
@@ -109,14 +51,114 @@ return 0;
 }
 </code>
 </pre>
-<p></p>
+    <p>Exercice 2 :Ecrire une fonction/procédure qui permet de déterminer les
+        éléments identiques entre deux vecteurs..</p>
+    <pre>
+     <code CLASS="language-c">
+#include &lt;stdio.h&gt;
+    void elements_identiques(int v1[], int v2[], int n,int m) {
+        printf("Elements identiques entre les deux vecteurs :\n");
+        for (int i = 0; i &lt; n; i++) {
+        for (int j = 0; j &lt; m; j++) {
+            if (v1[i] == v2[j]) {
+            printf("%d ", v1[i]);
+            break;
+            }
+        }
+        }
+        printf("\n");
+    }
+    int main() {
+        int x=100;
+        int n,i,u[x],j,m,y[x];
+        printf(" enetrer la taill de u");
+        scanf("%d", &n);
+        for (i = 0; i &lt; n; i++){
+        printf("u[%d]=", i);
+        scanf("%d",&u[i]);
+        }
+        printf(" enetrer la taill de y");
+        scanf("%d", &m);
+        for ( i= 0; i &lt; m; i++) {
+        printf("y[%d]=",i);
+        scanf("%d", &y[i]);
+        }
+        elements_identiques(u,y,n,m);
+        return 0;
+    }
+                
+        </code>
+    </pre>
+<b> <p> Exercice 3:Ecrire une fonction/procédure qui permet de déterminer si deux
+    matrices sont identiques.</p></b>
 <pre>
-<code>
+<code CLASS="language-c">
+#include&lt;stdio.h&gt;
+
+void identiques(int x[100][100], int y[100][100], int n, int m) {
+int a, i, j;
+a = 0;
+    for (i = 0; i &lt;n; i++) {
+         for (j = 0; j &lt; m; j++) {
+              if (x[i][j] == y[i][j]) {
+                  a = a + 1;
+                }
+         }
+    }
+
+    if (a &Gt;= (n * m)) {
+           printf("Les deux matrices sont identiques.\n");
+        } else {
+            printf("Les deux matrices ne sont pas identiques.\n");
+         }
+    }
+
+int main() {
+int n, m, i, j;
+int t[100][100], u[100][100];
+
+    printf("Entrez n : ");
+    scanf("%d", &n);
+
+    printf("Entrez m : ");
+    scanf("%d", &m);
+
+
+    printf("Entrez les éléments de la première matrice :\n");
+          for (i = 0; i &lt; n; i++) {
+                for (j = 0; j &lt; m; j++) {
+                printf("t[%d][%d] : ", i, j);
+                scanf("%d", &t[i][j]);
+                }
+             }
+
+
+    printf("Entrez les éléments de la deuxième matrice :\n");
+            for (i = 0; i &lt;n; i++) {
+                 for (j = 0; j &lt; m; j++) {
+                      printf("u[%d][%d] : ", i, j);
+                      scanf("%d", &u[i][j]);
+                  }
+            }
+
+
+identiques(t, u, n, m);
+
+return 0;
+}
 
 </code>
 </pre>
-            <P>Ecrire une fonction/procédure qui permet de trouver la transposé
-            d’une matrice .</P>
+
+<p>    Exercice 4 :Soit deux vecteurs T1 et T2,Ecrire une fonction/procédure qui
+    fusionne ces deux vecteurs dans un autre vecteur T3 trié sans répétition des
+    valeurs identiques.</p>
+<pre>
+<code class="language-c">
+</code>
+</pre>
+            <P>Exercice 5 :Ecrire une fonction/procédure qui permet de trouver la transposé
+                d’une matrice .</P>
 <pre>
 <code class="language-c">
 #include&lt;stdio.h&gt;
