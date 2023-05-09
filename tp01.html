@@ -70,36 +70,30 @@
 <pre>
 <code class="language-c" >
 #include &lt;stdio.h&gt;
+#include <stdio.h>
 
     int main() {
-        int n;
+        int n,i,j,temp;
         printf("Entrez la taille de T1 : ");
         scanf("%d", &n);
     
         int T1[n];
         printf("Entrez les valeurs de T1 :\n");
-        for (int i = 0; i &lt; n; i++) {
+        for (int i = 0; i < n; i++) {
             printf("T1[%d] = ", i);
             scanf("%d", &T1[i]);
         }
-    
-        int i = 0, j = n - 1;
-        while (i &lt;j) {
-            while (T1[i]&lt; 0 && i &lt; n) {
-                i++;
-            }
-            while (T1[j]&gt;= 0 && j &gt;= 0) {
-                j--;
-            }
-            if (i &lt;j) {
-                int temp = T1[i];
-                T1[i] = T1[j];
-                T1[j] = temp;
-            }
-        }
-    
+         for (i = 0; i < n; i++) {
+            for (j = i + 1; j < n; j++) {
+                if (T1[i] > T1[j]) {
+                    temp = T1[i];
+                    T1[i] = T1[j];
+                    T1[j] = temp;
+                }
+            }  
+         }
         printf("T1 après le tri :\n");
-        for (int i = 0; i&lt; n; i++) {
+        for (int i = 0; i< n; i++) {
             printf("T1[%d] = %d\n", i, T1[i]);
         }
     
