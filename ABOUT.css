@@ -1,0 +1,115 @@
+header {
+    background-color: #5f365f;
+    font-family: monospace;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+    background-image: url('prooguxr-logo7.png');
+    font-family: monospace;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header h1 {
+    font-size: 40px;
+    margin: 0;
+    font-family: monospace;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #00bcd4;
+}
+
+main {
+    padding: 40px;
+}
+
+section h2   {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #fafafa;
+}
+
+section p  {
+    color: #00bcd4;
+    font-family: monospace;
+    font-size: 30px;
+}
+
+section  p b {
+    color: #e4d5e3;
+    font-family: monospace;
+    font-size: 20px;
+    text-align: 20px;
+    margin-left: 40px;
+}
+section li a{
+    color: #00bcd4;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+footer {
+    color: #6d6a6a;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+}
+footer nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+footer nav ul li {
+    margin-left: 20px;
+}
+
+footer nav ul li a {
+    color: #a47baa;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+footer nav ul li a:hover {
+    color: #00bcd4;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
