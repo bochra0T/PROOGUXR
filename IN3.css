@@ -1,5 +1,5 @@
 header {
-    background-color: #5f365f;
+    background-color: #000000;
     font-family: monospace;
     color: #fff;
     padding: 20px;
@@ -109,52 +109,4 @@ section ul li a span {
 
 section ul li a:hover {
     color: #00bcd4;
-}
-.social-media-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.social-media-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.social-media-icons a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin: 0 10px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    line-height: 40px;
-    font-size: 20px;
-    transition: all 0.3s ease;
-}
-
-.social-media-icons a:hover {
-    background-color: #00bcd4;
-    color: #fff;
-}
-
-.social-media-icons a i {
-    line-height: inherit;
-}
-
-.social-media-icons a i.fa-github {
-    color: #333;
-}
-
-.social-media-icons a i.fa-telegram {
-    color: #0088cc;
-}
-
-.social-media-icons a i.fa-envelope {
-    color: #c71616;
 }

@@ -1,29 +1,41 @@
 header {
-    background-color:#5f365f;
-    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    background-color: #000000;
+    font-family: monospace;
     color: #fff;
-    padding: 50px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-attachment: fixed;
 }
 body {
-    background-image: url('LM.png');
-   font-family: monospace;
+background-color: #000000;
+    font-family: monospace;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 header h1 {
-    font-size: 40px;
+    font-size: 30px;
+    font-family: monospace;
     margin: 0;
 }
-header nav ul {
-    list-style:none;
+header h1  li {
+    list-style: none;
     margin: 0;
     padding: 0;
-    display:flex;
+    display: flex;
+}
+header h1 li a  {
+    color: #725672;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
 header nav ul li {
@@ -36,6 +48,7 @@ header nav ul li a {
     font-size: 20px;
     transition: all 0.3s ease;
 }
+
 header nav ul li a:hover {
     color: #00bcd4;
 }
@@ -48,11 +61,12 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
+    position: fixed;
 }
+
 footer nav ul {
     list-style: none;
     margin: 0;
@@ -65,7 +79,7 @@ footer nav ul li {
 }
 
 footer nav ul li a {
-    color: #a79da9;
+    color: #a47baa;
     text-decoration: none;
     font-size: 20px;
     transition: all 0.3s ease;
@@ -80,29 +94,11 @@ footer p {
     font-size: 16px;
     font-weight: bold;
 }
-section {
-    margin-bottom: 40px;
-}
 
-section h2 {
-    font-size: 80px;
-    margin-bottom: 20px;
-    color: #604864;
-    position:relative;
-    text-align: center;
+section ul li a img  {
+     width: 10%;
+     height: auto;
 }
-
-section ul li {
-    margin-bottom: 30px;
-    color: aliceblue;
-}
-
-section ul li a {
-    color: #c4c1c1;
-    text-decoration: none;
-    font-size: 30px;
-    transition: all 0.3s ease;
-}
-section ul li a:hover {
-    color: #00bcd4;
+section ul li a:hover img {
+   border: 2px solid #00bcd4;
 }
